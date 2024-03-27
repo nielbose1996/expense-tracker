@@ -8,8 +8,12 @@ import AddBalanceModal from './components/AddBalanceModal';
 import EditExpenseModal from './components/EditExpenseModal';
 
 function App() {
-  const [balance, setBalance] = useState(5000);
-  const [transactions, setTransactions] = useState([]);
+  const [balance, setBalance] = useState(
+    JSON.parse(localStorage.getItem('balance')) || 5000
+  );
+  const [transactions, setTransactions] = useState(
+    JSON.parse(localStorage.getItem('transactions')) || []
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAddBalanceModalOpen, setIsAddBalanceModalOpen] = useState(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -76,6 +80,16 @@ function App() {
     const newBalance = 5000 - totalExpenses; // Assuming 5000 is the initial balance
     setBalance(newBalance);
   }, [transactions]);
+
+  useEffect(() => {
+    localStorage.setItem('balance', JSON.stringify(balance));
+  }, [balance]);
+
+  // Update localStorage when transactions change
+  useEffect(() => {
+    localStorage.setItem('transactions', JSON.stringify(transactions));
+  }, [transactions]);
+
   return (
     <div className="app">
       <WalletBalance balance={balance} onAddIncome={handleOpenAddBalanceModal} />      
