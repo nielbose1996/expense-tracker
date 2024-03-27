@@ -1,0 +1,69 @@
+.Modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    overflow: auto;
+    border-radius: 10px;
+    outline: none;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  }
+  
+  .Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Added to maintain width */
+  }
+  
+  .add-btn {
+    background-color: #FFA500; /* Orange color for the add button */
+    color: white;
+  }
+  
+  .cancel-btn {
+    background-color: #ccc; /* Grey color for the cancel button */
+    color: white;
+  }
+  
+  /* Ensuring the input placeholder text color is consistent */
+  input::placeholder {
+    color: #aaa;
+  }
+  
+  /* Additional styling to match the design */
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
