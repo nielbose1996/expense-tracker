@@ -1,4 +1,5 @@
 import React from 'react';
+import './ExpenseandWallet.css';
 
 export default function Expenses({ totalExpenses }) {
   return (

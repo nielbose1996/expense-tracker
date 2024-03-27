@@ -1,4 +1,5 @@
 import React from 'react';
+import './TransactionItem.css';
 
 export default function TransactionItem({ transaction, onEdit, onDelete }) {
   return (

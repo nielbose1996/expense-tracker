@@ -1,0 +1,16 @@
+.transaction-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .transaction-item button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  

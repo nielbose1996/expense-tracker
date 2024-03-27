@@ -1,0 +1,15 @@
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .wallet-balance, .expenses {
+    flex-direction: column;
+  }
+
+  .transaction-item, .charts {
+    flex-direction: column;
+  }
+}
