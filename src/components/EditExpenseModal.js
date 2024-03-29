@@ -69,7 +69,7 @@ function EditExpenseModal({ isModalOpen, onEditExpense, onRequestClose, expenseT
           onChange={(e) => setDate(e.target.value)}
         />
         <div className="modal-actions">
-          <button type="submit" className="button">Add Expense</button>
+          <button type="submit" className="add-btn button">Add Expense</button>
           <button type="button" onClick={onRequestClose} className="button">Cancel</button>
         </div>
       </form>

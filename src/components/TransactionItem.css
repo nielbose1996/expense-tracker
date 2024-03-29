@@ -1,16 +1,56 @@
 .transaction-item {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 10px;
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .transaction-item button {
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8; /* Light border for each item */
+  border-radius: 10px; /* Rounded corners for the card */
+  padding: 12px 20px; /* Spacing inside each card */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Space out title, date, amount, and buttons */
+  margin: 10px 0; /* Spacing between cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: box-shadow 0.2s; /* Smooth transition for hover effects */
+}
+
+.transaction-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* More pronounced shadow on hover */
+}
+
+.transaction-title {
+  flex: 1; /* Give the title more room to expand */
+  font-size: 16px; /* Larger font for readability */
+}
+
+.transaction-date {
+  margin: 0 12px; /* Space out the date from the title and amount */
+  white-space: nowrap; /* Ensure the date is always on one line */
+  color: #657786; /* Subtle color for the date text */
+}
+
+.transaction-amount {
+  font-weight: 500; /* Semi-bold for the amount */
+  color: #f44336; /* Stylish color for amounts */
+}
+
+.edit-button, .delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 8px; /* Space out the buttons */
+}
+
+.icon {
+  width: 24px; /* Larger icons for visibility */
+  height: 24px; /* Maintain aspect ratio for icons */
+}
+
+.edit-button .icon {
+  color: #ffc107; /* Color for the edit icon */
+}
+
+.delete-button .icon {
+  color: #f44336; /* Color for the delete icon */
+}
+
+.edit-button:hover .icon, .delete-button:hover .icon {
+  color: #d32f2f; /* Darker color on hover for interactivity */
+}

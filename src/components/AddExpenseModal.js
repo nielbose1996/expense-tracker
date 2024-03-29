@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import './AddExpenseModal.css';
 
-Modal.setAppElement('#root'); // This line should be at the top level of your application and not inside the component.
+ 
 
 function AddExpenseModal({ isModalOpen, onAddExpense, onRequestClose }) {
   const [title, setTitle] = useState('');

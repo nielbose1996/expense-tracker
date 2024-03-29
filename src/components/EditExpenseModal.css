@@ -18,4 +18,7 @@
   }
   
   /* Add any additional styling you need for the form elements */
-  
+  .add-btn {
+    background-color: #FFA500; /* Orange color for the add button */
+    color: white;
+  }

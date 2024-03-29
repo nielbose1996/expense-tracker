@@ -1,0 +1,46 @@
+.transaction-list-container {
+    background-color: #F7F7F7; /* Background color of the entire container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .transaction-header {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+  
+  .pagination-icon {
+    font-size: 24px;
+    color: #9e9e9e;
+    cursor: pointer;
+  }
+  
+  .pagination-icon:hover {
+    color: #424242;
+  }
+  
+  .page-number {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    margin: 0 8px;
+    background-color: #4caf50; /* Adjust the color to match the screenshot */
+    color: white;
+    border-radius: 16px; /* Makes it circular */
+    font-size: 0.875rem;
+  }
+  
+  /* Add any additional styling as necessary */
+  

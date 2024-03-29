@@ -6,6 +6,7 @@ import { ExpenseSummary, ExpenseTrends } from './components/Charts';
 import AddExpenseModal from './components/AddExpenseModal';
 import AddBalanceModal from './components/AddBalanceModal';
 import EditExpenseModal from './components/EditExpenseModal';
+import './App.css';
 
 function App() {
   const [balance, setBalance] = useState(
@@ -92,21 +93,24 @@ function App() {
 
   return (
     <div className="app">
-      <WalletBalance balance={balance} onAddIncome={handleOpenAddBalanceModal} />      
+      <h1 className="header">Expense Tracker</h1>
+      <div className="top-section">
+        <WalletBalance balance={balance} onAddIncome={handleOpenAddBalanceModal} />
+        <Expenses totalExpenses={totalExpenses} onAddExpense={handleOpenModal} />
+        <ExpenseSummary data={calculateSummaryData(transactions)} />
+      </div>
+      <div className="bottom-section">
+        <TransactionList
+          transactions={transactions}
+          onEdit={openEditModal}
+          onDelete={deleteTransaction}
+        />
+        <ExpenseTrends data={calculateTrendsData(transactions)} />
+      </div>
       <AddBalanceModal
         isModalOpen={isAddBalanceModalOpen}
         onAddBalance={handleAddBalance}
         onRequestClose={handleCloseAddBalanceModal}
-      />
-      <Expenses totalExpenses={totalExpenses} onAddExpense={handleOpenModal} />
-      <div className="charts">
-        <ExpenseSummary data={calculateSummaryData(transactions)} />
-        <ExpenseTrends data={calculateTrendsData(transactions)} />
-      </div>
-      <TransactionList
-        transactions={transactions}
-        onEdit={openEditModal}
-        onDelete={deleteTransaction}
       />
       <EditExpenseModal
         isModalOpen={isEditModalOpen}
@@ -121,6 +125,7 @@ function App() {
       />
     </div>
   );
+  
 
 }
 

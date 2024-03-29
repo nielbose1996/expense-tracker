@@ -1,15 +1,52 @@
 .app {
+  font-family: 'Arial', sans-serif;
+  padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
+.header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.top-section, .bottom-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.top-section > div, .bottom-section > div {
+  flex: 1; /* Make each section take equal space */
+  margin-right: 10px; /* Spacing between the cards */
+}
+
+.top-section > div:last-child, .bottom-section > div:last-child {
+  margin-right: 0; /* Removes spacing for the last card */
+}
+
+/* Add this to keep the charts from stretching too much */
+.charts {
+  max-width: 600px; /* Adjust the max-width as needed */
+}
+
+/* Continue with the rest of your CSS... */
+
+/* Adjust responsive behavior as needed */
 @media (max-width: 768px) {
-  .wallet-balance, .expenses {
+  .top-section, .bottom-section {
     flex-direction: column;
   }
 
-  .transaction-item, .charts {
-    flex-direction: column;
+  .top-section > div, .bottom-section > div {
+    margin-right: 0;
+    margin-bottom: 10px; /* Add space between stacked cards */
+  }
+
+  .top-section > div:last-child, .bottom-section > div:last-child {
+    margin-bottom: 0; /* Remove the margin from the last card */
   }
 }

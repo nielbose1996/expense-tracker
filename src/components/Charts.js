@@ -1,50 +1,59 @@
 import React from 'react';
-import { PieChart, Pie, Sector, Cell, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis,  Tooltip, Legend } from 'recharts';
+import './Chart.css';
 
 const COLORS = ['#FFBB28', '#FF8042', '#0088FE'];
 
+
+
+
 function ExpenseSummary({ data }) {
   return (
-    <PieChart width={400} height={400}>
+    <PieChart width={300} height={300}>
       <Pie
         data={data}
-        cx={200}
-        cy={200}
-        labelLine={false}
-        label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-        outerRadius={80}
+        cx={150}
+        cy={150}
+        outerRadius={100}
         fill="#8884d8"
         dataKey="value"
+        label={({ name, percent }) => `${(percent * 100).toFixed(0)}%`}
+        labelLine={false}
       >
         {data.map((entry, index) => (
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
       </Pie>
       <Tooltip />
+      <Legend iconSize={10} layout="horizontal" verticalAlign="bottom" align="center" />
     </PieChart>
   );
 }
 
 
 function ExpenseTrends({ data }) {
-    return (
-      <BarChart
-        width={500}
-        height={300}
-        data={data}
-        margin={{
-          top: 20, right: 30, left: 20, bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="amount" fill="#8884d8" />
-      </BarChart>
-    );
-  }
+  return (
+    <div className="expense-summary-container">
+    <h2 className="expense-summary-header">Top Expenses</h2>
+    <BarChart
+      width={500}
+      height={300}
+      data={data}
+      layout="vertical" // This will make the bar chart horizontal
+      margin={{
+        top: 20, right: 100, left: 100, bottom: 5,
+      }}
+    >
+      <XAxis type="number" />
+      <YAxis dataKey="name" type="category" />
+      <Tooltip />
+      <Bar dataKey="amount" fill="#8884d8" barSize={20} />
+    </BarChart>
+    </div>
+  );
+}
+
+
   
   export { ExpenseSummary, ExpenseTrends };
   
