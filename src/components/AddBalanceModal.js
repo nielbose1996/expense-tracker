@@ -13,8 +13,8 @@ function AddBalanceModal({ isModalOpen, onAddBalance, onRequestClose }) {
       return;
     }
     onAddBalance(amount);
-    onRequestClose(); // Close modal
-    setIncomeAmount(''); // Reset the income amount
+    onRequestClose(); 
+    setIncomeAmount(''); 
   };
 
   return (

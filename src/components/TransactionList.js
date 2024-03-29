@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import TransactionItem from './TransactionItem';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import './TransactionList.css'; // Make sure to link your CSS file
+import './TransactionList.css';
 
 export default function TransactionList({ transactions, onEdit, onDelete }) {
-  const itemsPerPage = 3; // You can adjust this value
+  const itemsPerPage = 3; 
   const [currentPage, setCurrentPage] = useState(1);
 
   // Get current transactions

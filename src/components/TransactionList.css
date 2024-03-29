@@ -1,5 +1,5 @@
 .transaction-list-container {
-    background-color: #F7F7F7; /* Background color of the entire container */
+    background-color: #F7F7F7; 
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -36,11 +36,11 @@
     width: 32px;
     height: 32px;
     margin: 0 8px;
-    background-color: #4caf50; /* Adjust the color to match the screenshot */
+    background-color: #4caf50; 
     color: white;
-    border-radius: 16px; /* Makes it circular */
+    border-radius: 16px; 
     font-size: 0.875rem;
   }
   
-  /* Add any additional styling as necessary */
+ 
   

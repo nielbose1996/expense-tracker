@@ -39,7 +39,7 @@ function ExpenseTrends({ data }) {
       width={500}
       height={300}
       data={data}
-      layout="vertical" // This will make the bar chart horizontal
+      layout="vertical" 
       margin={{
         top: 20, right: 100, left: 100, bottom: 5,
       }}

@@ -43,25 +43,25 @@
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    box-sizing: border-box; /* Added to maintain width */
+    box-sizing: border-box; 
   }
   
   .add-btn {
-    background-color: #FFA500; /* Orange color for the add button */
+    background-color: #FFA500; 
     color: white;
   }
   
   .cancel-btn {
-    background-color: #ccc; /* Grey color for the cancel button */
+    background-color: #ccc; 
     color: white;
   }
   
-  /* Ensuring the input placeholder text color is consistent */
+
   input::placeholder {
     color: #aaa;
   }
   
-  /* Additional styling to match the design */
+
   h2 {
     text-align: center;
     margin-bottom: 20px;

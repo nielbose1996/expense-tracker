@@ -1,14 +1,14 @@
 .expense-summary-container {
-    background-color: #fff; /* Or the color of your choice */
+    background-color: #fff; 
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    text-align: center; /* Aligns the header text to the center */
+    text-align: center; 
   }
   
   .expense-summary-header {
     font-size: 1.5rem;
-    color: #333; /* Adjust color to match your design */
-    margin-bottom: 20px; /* Adds space between the header and chart */
+    color: #333; 
+    margin-bottom: 20px; 
   }
   

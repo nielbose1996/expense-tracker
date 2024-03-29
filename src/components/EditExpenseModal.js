@@ -8,7 +8,7 @@ function EditExpenseModal({ isModalOpen, onEditExpense, onRequestClose, expenseT
   const [category, setCategory] = useState('');
   const [date, setDate] = useState('');
 
-  // When the modal is opened and an expense is passed in, populate the state
+
   useEffect(() => {
     if (expenseToEdit) {
       setTitle(expenseToEdit.title);
@@ -61,7 +61,7 @@ function EditExpenseModal({ isModalOpen, onEditExpense, onRequestClose, expenseT
           onChange={(e) => setCategory(e.target.value)}
         >
           <option value="">Select Category</option>
-          {/* Insert other categories here */}
+          
         </select>
         <input
           type="date"

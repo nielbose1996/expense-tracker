@@ -17,7 +17,7 @@ function AddExpenseModal({ isModalOpen, onAddExpense, onRequestClose }) {
       return;
     }
     onAddExpense({ title, amount: parseFloat(price), category, date });
-    onRequestClose(); // Close modal
+    onRequestClose(); 
   };
 
   return (

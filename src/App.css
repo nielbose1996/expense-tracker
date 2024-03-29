@@ -20,22 +20,22 @@
 }
 
 .top-section > div, .bottom-section > div {
-  flex: 1; /* Make each section take equal space */
-  margin-right: 10px; /* Spacing between the cards */
+  flex: 1; 
+  margin-right: 10px;
 }
 
 .top-section > div:last-child, .bottom-section > div:last-child {
-  margin-right: 0; /* Removes spacing for the last card */
+  margin-right: 0; 
 }
 
-/* Add this to keep the charts from stretching too much */
+
 .charts {
-  max-width: 600px; /* Adjust the max-width as needed */
+  max-width: 600px; 
 }
 
-/* Continue with the rest of your CSS... */
 
-/* Adjust responsive behavior as needed */
+
+
 @media (max-width: 768px) {
   .top-section, .bottom-section {
     flex-direction: column;
@@ -43,10 +43,10 @@
 
   .top-section > div, .bottom-section > div {
     margin-right: 0;
-    margin-bottom: 10px; /* Add space between stacked cards */
+    margin-bottom: 10px; 
   }
 
   .top-section > div:last-child, .bottom-section > div:last-child {
-    margin-bottom: 0; /* Remove the margin from the last card */
+    margin-bottom: 0; 
   }
 }
