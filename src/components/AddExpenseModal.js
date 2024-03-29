@@ -10,6 +10,13 @@ function AddExpenseModal({ isModalOpen, onAddExpense, onRequestClose }) {
   const [category, setCategory] = useState('');
   const [date, setDate] = useState('');
 
+  const resetFormFields = () => {
+    setTitle('');
+    setPrice('');
+    setCategory('');
+    setDate('');
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!title || !price || !category || !date) {
@@ -17,6 +24,7 @@ function AddExpenseModal({ isModalOpen, onAddExpense, onRequestClose }) {
       return;
     }
     onAddExpense({ title, amount: parseFloat(price), category, date });
+    resetFormFields();
     onRequestClose(); 
   };
 
